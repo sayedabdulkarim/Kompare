@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kompare - JSON Comparison Tool</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1>Kompare</h1>
+      <p class="tagline">JSON Comparison Tool</p>
+      <button id="themeToggle" class="btn-icon" title="Toggle Theme">
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon">🌙</span>
+      </button>
+    </header>
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+      <button id="sortBtn" class="btn">🔤 Sort A-Z</button>
+      <button id="formatBtn" class="btn">✨ Format</button>
+      <button id="minifyBtn" class="btn">📦 Minify</button>
+      <button id="compareBtn" class="btn btn-primary">⚡ Compare</button>
+      <button id="swapBtn" class="btn">🔄 Swap</button>
+      <button id="clearAllBtn" class="btn btn-danger">🗑️ Clear All</button>
+    </div>
+
+    <!-- Editors -->
+    <div class="editors">
+      <!-- Left Editor -->
+      <div class="editor-panel">
+        <div class="editor-header">
+          <span class="editor-title">Original JSON</span>
+          <div class="editor-actions">
+            <button class="btn-sm" data-action="copy" data-target="left">📋 Copy</button>
+            <button class="btn-sm" data-action="clear" data-target="left">✕ Clear</button>
+          </div>
+        </div>
+        <textarea id="leftJson" placeholder="Paste your JSON here..."></textarea>
+        <div class="error-msg" id="leftError"></div>
+      </div>
+
+      <!-- Right Editor -->
+      <div class="editor-panel">
+        <div class="editor-header">
+          <span class="editor-title">Modified JSON</span>
+          <div class="editor-actions">
+            <button class="btn-sm" data-action="copy" data-target="right">📋 Copy</button>
+            <button class="btn-sm" data-action="clear" data-target="right">✕ Clear</button>
+          </div>
+        </div>
+        <textarea id="rightJson" placeholder="Paste your JSON here..."></textarea>
+        <div class="error-msg" id="rightError"></div>
+      </div>
+    </div>
+
+    <!-- Diff Result -->
+    <div class="diff-section">
+      <div class="diff-header">
+        <span class="diff-title">Comparison Result</span>
+        <div class="diff-stats" id="diffStats"></div>
+      </div>
+      <div class="diff-result" id="diffResult">
+        <p class="placeholder-text">Click "Compare" to see differences</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Made with ❤️ by <strong>Sayed Abdul Karim</strong></p>
+    </footer>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/sort.js"></script>
+  <script src="js/diff.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
