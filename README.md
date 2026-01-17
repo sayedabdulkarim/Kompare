@@ -2,7 +2,7 @@
 
 A simple, fast JSON comparison tool with alphabetical sorting.
 
-![Kompare Screenshot](https://via.placeholder.com/800x400?text=Kompare+Screenshot)
+![Kompare Screenshot](assets/screenshot.jpeg)
 
 ## Features
 
